@@ -1,0 +1,33 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: spring-cloud-config-server #服务器的id，客户端必须指定改这个id名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yangbinrucool/configserver.git     # 配置git仓库的地址
+#          search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+#          username: username                                        # git仓库的账号
+#          password: password                                    # git仓库的密码
+  rabbitmq:
+     host: 192.168.135.154
+     port: 5672
+     username: guest
+     password: guest
+
+
+
+eureka:
+     client:
+       serviceUrl:
+         defaultZone: http://localhost:8000/eureka/   # 注册中心eurka地址
+
+management:
+     security:
+     enabled: false
+     endpoints:
+      web:
+        exposure:
+          include:  bus-refresh
