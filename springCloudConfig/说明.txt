@@ -1,2 +1,2 @@
 修改git文件后，访问服务端地址： http://localhost:8001/actuator/bus-refresh 刷新配置，然后访问客户端地址：http://localhost:8002/hi
-获取最新的配置,同时必须开启rabbtmq服务！
+获取最新的配置,同时必须开启rabbtmq服务！另外，github上面必须有configserver-test.properties（根据客户端的配置决定配置文件名称）配置文件
